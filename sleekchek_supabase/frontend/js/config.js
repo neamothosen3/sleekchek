@@ -6,8 +6,8 @@
 // Supabase project credentials — find these in your Supabase project at
 // Project Settings > API. The anon/public key is safe to expose in
 // frontend code (it only has the permissions granted by your RLS policies).
-const SUPABASE_URL = "https://zbimjhcxwwuprmuzjqxx.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_H0mDh2EPbu48qwt9UBM19w_pceDBdf_";
+const SUPABASE_URL = "https://ivjcfltiyegnzfoeqhwr.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_8wb5TXd77bn3bID6EodxkQ_NKxy-m4t";
 
 // Storage bucket where admin-uploaded product images are kept.
 const SUPABASE_PRODUCT_BUCKET = "product-images";
