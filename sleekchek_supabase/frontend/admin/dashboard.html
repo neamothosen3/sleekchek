@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — sleekchek Admin</title>
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="brand">
+      <img src="/images/logo.svg" alt="sleekchek logo" class="logo-slot" style="height:24px;">
+      <span class="wordmark-fallback">sleekchek</span>
+    </div>
+    <nav class="admin-nav">
+      <a href="dashboard.html" class="active">Products</a>
+      <a href="/index.html" target="_blank">View store &#8599;</a>
+    </nav>
+    <button class="admin-logout" id="logoutBtn">Log out</button>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <span class="eyebrow">Admin panel</span>
+        <h1 class="h3" style="margin-top:6px;">Product management</h1>
+      </div>
+      <button class="btn btn-primary" id="newProductBtn">+ Add product</button>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card"><div class="num" id="statTotal">0</div><div class="lbl">Total products</div></div>
+      <div class="stat-card"><div class="num" id="statCategories">4</div><div class="lbl">Categories</div></div>
+      <div class="stat-card"><div class="num" id="statSale">0</div><div class="lbl">On sale</div></div>
+    </div>
+
+    <!-- Add / Edit product panel (hidden until "Add product" or "Edit" clicked) -->
+    <div class="admin-panel" id="formPanel" style="display:none;">
+      <h3 class="h3" id="formTitle" style="margin-bottom:20px;">Add product</h3>
+      <form id="productForm" enctype="multipart/form-data">
+        <input type="hidden" id="productId">
+        <div class="admin-form-grid">
+          <div class="form-group">
+            <label for="pTitle">Title</label>
+            <input type="text" id="pTitle" required>
+          </div>
+          <div class="form-group">
+            <label for="pCategory">Category</label>
+            <select id="pCategory" required>
+              <option value="Tshirt">Tshirt</option>
+              <option value="Man Shirt">Man Shirt</option>
+              <option value="Kids Tshirt">Kids Tshirt</option>
+              <option value="Woman Oversize Tshirt">Woman Oversize Tshirt</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pPrice">Price (৳)</label>
+            <input type="number" id="pPrice" min="0" required>
+          </div>
+          <div class="form-group">
+            <label for="pOldPrice">Old price (optional, for Sale)</label>
+            <input type="number" id="pOldPrice" min="0">
+          </div>
+          <div class="form-group full">
+            <label for="pDescription">Description</label>
+            <textarea id="pDescription" rows="3"></textarea>
+          </div>
+          <div class="form-group full">
+            <label>Available sizes</label>
+            <div class="size-checkbox-row" id="sizeCheckboxRow">
+              <!-- checkboxes populated by dashboard.js -->
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pTag">Tag (optional)</label>
+            <select id="pTag">
+              <option value="">None</option>
+              <option value="New">New</option>
+              <option value="Sale">Sale</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <!--
+              IMAGE UPLOAD — required, direct local file upload only (no URL field).
+              This <input type="file"> sends the image as multipart/form-data
+              to the Flask backend, which saves it under backend/uploads/.
+            -->
+            <label for="pImage">Product image (upload from device)</label>
+            <div class="upload-drop" id="uploadDrop">
+              <img id="imgPreview" class="preview">
+              <p id="uploadHint">Click to choose an image (PNG/JPG/WEBP, max 8MB)</p>
+              <input type="file" id="pImage" accept="image/png,image/jpeg,image/webp,image/gif">
+            </div>
+          </div>
+        </div>
+        <p class="admin-status" id="formStatus"></p>
+        <div style="display:flex;gap:12px;margin-top:10px;">
+          <button type="submit" class="btn btn-primary">Save product</button>
+          <button type="button" class="btn btn-outline" id="cancelFormBtn" style="color:var(--paper);border-color:var(--line-dark);">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="admin-table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Image</th><th>Title</th><th>Category</th><th>Price</th><th>Sizes</th><th>Tag</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="productTableBody">
+          <tr><td colspan="7" style="text-align:center;color:var(--muted-dark);font-family:var(--font-mono);padding:30px;">Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="/js/config.js"></script>
+<script src="/admin/js/admin.js"></script>
+<script src="/admin/js/dashboard.js"></script>
+</body>
+</html>

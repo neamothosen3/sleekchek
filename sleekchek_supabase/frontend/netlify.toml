@@ -1,0 +1,23 @@
+# Netlify build settings for the sleekchek frontend.
+# This is a static site (no build step needed) — Netlify just publishes
+# the contents of this folder as-is.
+
+[build]
+  publish = "."
+
+# Clean URLs (optional): /shop instead of /shop.html
+[[redirects]]
+  from = "/shop"
+  to = "/shop.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/login.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"

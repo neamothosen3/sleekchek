@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "title": "Core Tee — Charcoal",
+    "category": "Tshirt",
+    "price": 950,
+    "old_price": null,
+    "description": "Heavyweight 220gsm cotton tee with a boxy drop-shoulder cut. Garment-dyed for a soft, worn-in hand feel from the first wear.",
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "images/products/product1.jpg",
+    "tag": "New"
+  },
+  {
+    "id": "2",
+    "title": "Core Tee — Off White",
+    "category": "Tshirt",
+    "price": 950,
+    "old_price": 1100,
+    "description": "Heavyweight 220gsm cotton tee with a boxy drop-shoulder cut. Garment-dyed for a soft, worn-in hand feel from the first wear.",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "image": "images/products/product2.jpg",
+    "tag": "Sale"
+  },
+  {
+    "id": "3",
+    "title": "Oxford Shirt — Slate Blue",
+    "category": "Man Shirt",
+    "price": 1650,
+    "old_price": null,
+    "description": "Structured cotton-oxford shirt with a clean spread collar. Tailored fit through the body, full-length sleeve.",
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "images/products/product3.jpg",
+    "tag": null
+  },
+  {
+    "id": "4",
+    "title": "Linen Shirt — Sand",
+    "category": "Man Shirt",
+    "price": 1850,
+    "old_price": null,
+    "description": "Breathable linen-cotton blend shirt built for humidity. Relaxed fit, mother-of-pearl buttons.",
+    "sizes": ["M", "L", "XL"],
+    "image": "images/products/product4.jpg",
+    "tag": "New"
+  },
+  {
+    "id": "5",
+    "title": "Mini Explorer Tee",
+    "category": "Kids Tshirt",
+    "price": 650,
+    "old_price": null,
+    "description": "Soft-touch combed cotton tee sized for ages 3–10. Reinforced neckline for everyday play.",
+    "sizes": ["2-3Y", "4-5Y", "6-7Y", "8-9Y"],
+    "image": "images/products/product5.jpg",
+    "tag": null
+  },
+  {
+    "id": "6",
+    "title": "Little Champ Tee",
+    "category": "Kids Tshirt",
+    "price": 650,
+    "old_price": 750,
+    "description": "Soft-touch combed cotton tee sized for ages 3–10. Reinforced neckline for everyday play.",
+    "sizes": ["2-3Y", "4-5Y", "6-7Y"],
+    "image": "images/products/product6.jpg",
+    "tag": "Sale"
+  },
+  {
+    "id": "7",
+    "title": "Oversize Tee — Stone",
+    "category": "Woman Oversize Tshirt",
+    "price": 1050,
+    "old_price": null,
+    "description": "Dropped shoulder, boxy oversize silhouette in brushed cotton jersey. Cropped-neutral length, unisex fit.",
+    "sizes": ["S", "M", "L"],
+    "image": "images/products/product7.jpg",
+    "tag": "New"
+  },
+  {
+    "id": "8",
+    "title": "Oversize Tee — Black",
+    "category": "Woman Oversize Tshirt",
+    "price": 1050,
+    "old_price": null,
+    "description": "Dropped shoulder, boxy oversize silhouette in brushed cotton jersey. Cropped-neutral length, unisex fit.",
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "images/products/product8.jpg",
+    "tag": null
+  }
+]

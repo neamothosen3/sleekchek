@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <rect width="600" height="800" fill="#f7f6f3"/>
+  <rect x="0.5" y="0.5" width="599" height="799" fill="none" stroke="#d8d5ce"/>
+  <g fill="#8a8a85" font-family="monospace" text-anchor="middle">
+    <text x="300" y="380" font-size="22" letter-spacing="2">[ IMAGE ]</text>
+    <text x="300" y="415" font-size="14" letter-spacing="1">Add file to</text>
+    <text x="300" y="438" font-size="14" letter-spacing="1">images/products/</text>
+  </g>
+</svg>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sleekchek — be confidential</title>
+<meta name="description" content="sleekchek — premium streetwear from Bangladesh. Tshirts, shirts, kidswear and oversize fits. Be confidential.">
+<!-- Favicon set — see frontend/images/ (favicon.svg is the source; replace all files here to rebrand) -->
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="images/site.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- =========================================================
+     NAVBAR
+     ========================================================= -->
+<header class="navbar is-dark" id="siteNav">
+  <div class="container">
+    <div class="nav-left">
+      <!--
+        LOGO SLOT
+        Place your logo file at: frontend/images/logo.svg
+        (svg recommended; png/webp also works — just update the src below)
+        If the file is missing, the text wordmark "SLEEKCHEK" shows instead.
+      -->
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="sleekchek logo" class="logo-slot">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="shop.html?cat=Tshirt">Tshirt</a>
+        <a href="shop.html?cat=Man%20Shirt">Man Shirt</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <form class="search-box" data-search-form>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search products…" aria-label="Search">
+      </form>
+      <button class="icon-btn" data-open-bag aria-label="Open bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="bag-count" data-bag-count>0</span>
+      </button>
+      <button class="hamburger icon-btn" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobileNav" style="position:fixed;inset:0 0 0 auto;width:78vw;background:var(--ink);color:var(--paper);z-index:600;transform:translateX(100%);transition:transform .35s var(--ease);padding:100px 28px;">
+  <nav style="display:flex;flex-direction:column;gap:22px;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;font-size:.95rem;">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="shop.html?cat=Tshirt">Tshirt</a>
+    <a href="shop.html?cat=Man%20Shirt">Man Shirt</a>
+    <a href="shop.html?cat=Kids%20Tshirt">Kids Tshirt</a>
+    <a href="shop.html?cat=Woman%20Oversize%20Tshirt">Woman Oversize</a>
+  </nav>
+</div>
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="hero">
+  <div class="hero-media">
+    <!-- HERO IMAGE SLOT: place file at frontend/images/hero.jpg -->
+    <img src="images/hero.jpg" alt="sleekchek hero" onerror="this.style.display='none'">
+  </div>
+  <div class="hero-content">
+    <span class="hero-tag">Bangladesh &middot; SS26 Collection</span>
+    <h1 class="hero-title redact" data-label="[ CLASSIFIED ]">SLEEKCHEK</h1>
+    <p class="hero-sub">be confidential — premium essentials cut clean, made for the street and everything after it.</p>
+    <div class="hero-actions">
+      <a href="shop.html" class="btn btn-primary">Shop the drop</a>
+      <a href="#collections" class="btn btn-outline">View collections</a>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee strip -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>BE CONFIDENTIAL</span><span>&middot;</span>
+    <span>FREE DELIVERY ON PREPAID ORDERS</span><span>&middot;</span>
+    <span>SLEEKCHEK BANGLADESH</span><span>&middot;</span>
+    <span>BE CONFIDENTIAL</span><span>&middot;</span>
+    <span>FREE DELIVERY ON PREPAID ORDERS</span><span>&middot;</span>
+    <span>SLEEKCHEK BANGLADESH</span><span>&middot;</span>
+  </div>
+</div>
+
+<!-- =========================================================
+     COLLECTIONS
+     ========================================================= -->
+<section class="section" id="collections">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">Categories</span>
+        <h2 class="h2">Shop by collection</h2>
+      </div>
+      <a href="shop.html" class="btn btn-dark">View all products</a>
+    </div>
+    <div class="collections">
+      <a class="collection-card" href="shop.html?cat=Tshirt">
+        <!-- CATEGORY IMAGE SLOT: images/products/category-tshirt.jpg -->
+        <img src="images/products/category-tshirt.jpg" alt="Tshirt collection" onerror="this.style.opacity=0">
+        <div class="label"><span class="eyebrow">01</span><h3>Tshirt</h3></div>
+      </a>
+      <a class="collection-card" href="shop.html?cat=Man%20Shirt">
+        <img src="images/products/category-manshirt.jpg" alt="Man Shirt collection" onerror="this.style.opacity=0">
+        <div class="label"><span class="eyebrow">02</span><h3>Man Shirt</h3></div>
+      </a>
+      <a class="collection-card" href="shop.html?cat=Woman%20Oversize%20Tshirt">
+        <img src="images/products/category-oversize.jpg" alt="Woman Oversize Tshirt collection" onerror="this.style.opacity=0">
+        <div class="label"><span class="eyebrow">03</span><h3>Woman Oversize</h3></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FEATURED PRODUCTS
+     ========================================================= -->
+<section class="section section-tight">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">New in</span>
+        <h2 class="h2">Featured</h2>
+      </div>
+    </div>
+    <div class="product-grid" id="featuredGrid">
+      <div class="empty-state">Loading products…</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     BRAND STRIP
+     ========================================================= -->
+<section class="dark-section section">
+  <div class="container" style="max-width:820px;text-align:center;">
+    <span class="eyebrow">Our line</span>
+    <h2 class="h2" style="margin:14px 0 20px;">Cut clean. Say nothing. <span class="redact" data-label="[ REDACTED ]">Wear everything.</span></h2>
+    <p class="lede" style="margin:0 auto;">sleekchek is built on quiet confidence — heavyweight fabrics, sharp silhouettes, and a fit list long enough for the whole family. No noise, just fabric that speaks.</p>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="images/logo.svg" alt="sleekchek logo" class="logo-slot">
+        </a>
+        <p>be confidential. Premium clothing made in Bangladesh, delivered nationwide.</p>
+        <!--
+          SOCIAL ICON SLOTS — place files at:
+          images/icons/facebook-icon.svg, instagram-icon.svg, x-icon.svg, threads-icon.svg
+          Then replace href="#" with your real profile links.
+        -->
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><img src="images/icons/facebook-icon.svg" alt="" onerror="this.style.opacity=0"></a>
+          <a href="#" aria-label="Instagram"><img src="images/icons/instagram-icon.svg" alt="" onerror="this.style.opacity=0"></a>
+          <a href="#" aria-label="X (Twitter)"><img src="images/icons/x-icon.svg" alt="" onerror="this.style.opacity=0"></a>
+          <a href="#" aria-label="Threads"><img src="images/icons/threads-icon.svg" alt="" onerror="this.style.opacity=0"></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?cat=Tshirt">Tshirt</a></li>
+          <li><a href="shop.html?cat=Man%20Shirt">Man Shirt</a></li>
+          <li><a href="shop.html?cat=Kids%20Tshirt">Kids Tshirt</a></li>
+          <li><a href="shop.html?cat=Woman%20Oversize%20Tshirt">Woman Oversize</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Track order</a></li>
+          <li><a href="#">Size guide</a></li>
+          <li><a href="#">Delivery &amp; returns</a></li>
+          <li><a href="https://wa.me/8801627053081" target="_blank" rel="noopener">Contact on WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About sleekchek</a></li>
+          <li><a href="admin/login.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> sleekchek. All rights reserved.</span>
+      <span>be confidential.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================
+     BAG DRAWER (shared across pages)
+     ========================================================= -->
+<div class="bag-overlay" id="bagOverlay">
+  <div class="bag-drawer">
+    <div class="bag-header">
+      <h3>Your Bag</h3>
+      <button class="icon-btn" id="bagClose" aria-label="Close bag">&times;</button>
+    </div>
+    <div class="bag-items" id="bagItems"></div>
+    <div class="bag-empty" id="bagEmpty" style="display:none;">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <p>Your bag is empty.<br>Time to declassify some fits.</p>
+      <a href="shop.html" class="btn btn-dark">Shop now</a>
+    </div>
+    <div class="bag-footer" id="bagFooter" style="display:none;">
+      <div class="bag-total-row"><span>Subtotal</span><span id="bagTotal">৳0</span></div>
+      <button class="btn btn-dark btn-block" id="checkoutTrigger">Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     PRODUCT DETAIL MODAL
+     ========================================================= -->
+<div class="pd-overlay" id="productModalOverlay">
+  <div class="pd-modal" id="productModalContent"></div>
+</div>
+
+<!-- =========================================================
+     CHECKOUT FORM MODAL
+     ========================================================= -->
+<div class="pd-overlay checkout-modal" id="checkoutOverlay">
+  <div class="pd-modal">
+    <button class="pd-close" id="checkoutClose" aria-label="Close">&times;</button>
+    <form class="checkout-form" id="checkoutForm">
+      <div>
+        <span class="eyebrow">Checkout</span>
+        <h2 class="h3" style="margin-top:6px;">Delivery details</h2>
+      </div>
+      <div class="form-group">
+        <label for="coName">Full name</label>
+        <input type="text" id="coName" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="coPhone">Phone number</label>
+        <input type="tel" id="coPhone" name="phone" placeholder="01XXXXXXXXX" required>
+      </div>
+      <div class="form-group">
+        <label for="coAddress">Delivery address</label>
+        <textarea id="coAddress" name="address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Payment method</label>
+        <div class="payment-options">
+          <label class="payment-option selected">
+            <input type="radio" name="payment" value="Cash on Delivery" checked> Cash on Delivery
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="bKash"> bKash
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="Nagad"> Nagad
+          </label>
+        </div>
+        <p class="pay-note" id="payNote"></p>
+      </div>
+      <button type="submit" class="btn btn-dark btn-block">Confirm order via WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login — sleekchek</title>
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-login-wrap">
+  <div class="admin-login-card">
+    <!-- LOGO SLOT: place file at frontend/images/logo.svg -->
+    <div class="brand" style="justify-content:center;margin-bottom:8px;">
+      <img src="/images/logo.svg" alt="sleekchek logo" class="logo-slot">
+      <span class="wordmark-fallback">sleekchek</span>
+    </div>
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:28px;">Admin panel</span>
+
+    <form id="loginForm" class="checkout-form" style="padding:0;">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required autocomplete="current-password">
+      </div>
+      <p id="loginError" class="admin-error"></p>
+      <button type="submit" class="btn btn-dark btn-block">Log in</button>
+    </form>
+    <p class="admin-hint">Default demo credentials: <code>admin / sleekchek2026</code><br>Change these via <code>ADMIN_USERNAME</code> / <code>ADMIN_PASSWORD</code> env vars on your backend.</p>
+    <a href="/index.html" class="admin-back-link">&larr; Back to store</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="/js/config.js"></script>
+<script src="/admin/js/admin.js"></script>
+</body>
+</html>
